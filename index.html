@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Whispers of Smart Money — The Hidden Geometry of Markets · Master Edition v5.0+</title>
+<meta name="author" content="gogdood666"/>
+<meta name="color-scheme" content="dark"/>
+<style>
+/* ===================================================================
+   MASTER BOOK — Dark Clean • A4 Pages • Medium Readable Typography
+   =================================================================== */
+:root{
+  --bg:#000000;           /* ดำสนิท */
+  --panel:#0a0a0a;        /* ชั้นกระดาษ */
+  --ink:#E8EEF7;          /* ตัวอักษรหลัก */
+  --muted:#9FB3C8;        /* ตัวอักษรรอง */
+  --line:#1C2530;         /* เส้น */
+  --good:#2CCB8E;         /* เขียวแท่งเทียน */
+  --bad:#FF6C6C;          /* แดงแท่งเทียน */
+  --accent:#7AA2F7;       /* ไฮไลต์ฟ้า */
+  --accent2:#E0AF68;      /* ไฮไลต์ทอง */
+  --frame:#121212;        /* ขอบกระดาษ */
+  --tag:#162033;          /* แท็ก/ชิป */
+  --shadow: 0 10px 28px rgba(0,0,0,.55);
+  --radius: 18px;
+  --font: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans Thai", sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6}
+h1,h2,h3{margin:.1rem 0 .6rem; line-height:1.2}
+h1{font-weight:800;letter-spacing:.3px}
+h2{font-weight:750}
+h3{font-weight:700;color:var(--accent)}
+p{margin:.35rem 0}
+small, .muted{color:var(--muted)}
+hr{border:0;border-top:1px solid var(--line);margin:1rem 0}
+ul{margin:.35rem 0 .5rem .95rem}
+li{margin:.22rem 0}
+.badge{display:inline-flex;gap:.5rem;flex-wrap:wrap}
+.badge span{font-size:.74rem;background:var(--tag);border:1px solid rgba(255,255,255,.06);
+  padding:.25rem .6rem;border-radius:999px;color:#cfe2ff}
+
+/* ---------- A4 Page ---------- */
+.page{
+  width:210mm; min-height:297mm; margin:0 auto; padding:18mm 16mm;
+  background:linear-gradient(180deg,var(--panel),#050505);
+  border-left:1px solid var(--frame); border-right:1px solid var(--frame);
+  box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px; position:relative;
+}
+.head{display:flex;justify-content:space-between;align-items:center}
+.sec{font-size:.8rem;letter-spacing:.12em;color:var(--muted)}
+.chip{font-size:.72rem;background:#0b0b0b;border:1px solid #1f2a38;color:#b9d2ec;border-radius:10px;padding:.18rem .55rem}
+.card{background:linear-gradient(180deg,#0b0b0b,#0a0a0a);border:1px solid #1a1a1a;border-radius:var(--radius);padding:14px}
+.grid{display:grid;gap:12px}
+.grid-2{grid-template-columns:1fr 1fr}
+.figure{background:#0b0b0b;border:1px solid #1a1a1a;border-radius:14px;padding:10px}
+.figure canvas{width:100%;height:320px;display:block;border-radius:10px;background:#0c0c0c}
+.figcap{font-size:.86rem;color:#a9bfd6;margin-top:6px}
+.kv{display:grid;grid-template-columns:160px 1fr;gap:10px}
+.hr-soft{height:1px;background:linear-gradient(90deg,transparent,#1f2938 50%,transparent);margin:.4rem 0}
+ul.tight>li{margin:.18rem 0}
+
+/* Cover */
+.cover{
+  min-height:60vh; display:flex; flex-direction:column; justify-content:center; gap:16px;
+  background:
+    radial-gradient(80% 80% at 85% 5%, rgba(122,162,247,.08), transparent 60%),
+    radial-gradient(60% 60% at 15% 95%, rgba(224,175,104,.07), transparent 55%);
+  border:1px solid #1a1a1a;border-radius:22px;padding:24px 22px
+}
+.title-dual{display:flex;flex-direction:column;gap:.4rem;margin-top:12px}
+.title-dual .t1{font-size:2.2rem;font-weight:900}
+.title-dual .t2{font-size:1.28rem;color:#b9c8dc}
+.tagline{color:#8fb3ff}
+.quote{font-style:italic;color:#b8cbdf}
+
+/* Page Footer with Auto Number (filled by JS) */
+.footer{
+  margin-top:auto;display:flex;justify-content:space-between;align-items:center;color:#96a9c0;
+  font-size:.8rem;border-top:1px dashed #222;padding-top:8px
+}
+.footer .pageno{color:#b5c6dc}
+
+/* Print */
+@media print{
+  body{background:#000}
+  .page{page-break-after:always;box-shadow:none;border:0}
+}
+</style>
+</head>
+<body>
+
+<!-- =========================
+     COVER
+     ========================= -->
+<section class="page">
+  <div class="cover">
+    <div class="title-dual">
+      <div class="t1">Whispers of Smart Money</div>
+      <div class="t2">The Hidden Geometry of Markets</div>
+    </div>
+    <div class="hr-soft"></div>
+    <p class="tagline">Master Edition v5.0+ · Precision SMC/ICT · Multi-Timeframe Execution · Dark Clean</p>
+    <div class="badge">
+      <span>Author: <b>gogdood666</b></span>
+      <span>TV-style Candles</span>
+      <span>A4 Print-Ready</span>
+      <span>No TOC • No Audio</span>
+    </div>
+    <p class="quote">“อ่านโครงสร้าง · วางแผนสภาพคล่อง · เคารพเวลา · แล้วค่อยลงมือ.” — gogdood666</p>
+  </div>
+  <div class="footer"><span>© gogdood666 — All rights reserved.</span><span class="pageno"></span></div>
+</section>
+
+<!-- =========================
+     BOOK SECTIONS (AUTO BUILD)
+     ========================= -->
+<div id="book-root"></div>
+
+<!-- =========================
+     CHART ENGINE & BOOK RENDER
+     ========================= -->
+<script>
+/* ============================================================
+   1) Candle Engine — TradingView-like body+wick + Annotations
+   ============================================================ */
+const T = {
+  bg:"#0c0c0c", grid:"#171a22", axis:"#2a3a4f",
+  bull:"#2CCB8E", bear:"#FF6C6C",
+  fvg:"#283246", fvgLine:"#6aa2ff",
+  premium:"rgba(244,108,108,.10)", discount:"rgba(67,201,137,.10)",
+  asia:"rgba(122,162,247,.09)", label:"#a9bfd6",
+  ref:"#3a4e6a"
+};
+function rnd(a,b){return Math.random()*(b-a)+a}
+function series(n=140, driftSeed=0.28){
+  let o=100, s=[];
+  for(let i=0;i<n;i++){
+    const drift = (Math.sin(i/18)+Math.cos(i/11))*driftSeed;
+    const body = rnd(-1.9,1.9) + drift;
+    const wickU = Math.abs(rnd(0.25,1.6)+Math.max(0,drift));
+    const wickD = Math.abs(rnd(0.25,1.6)-Math.min(0,drift));
+    const open=o, close=o+body, high=Math.max(open,close)+wickU, low=Math.min(open,close)-wickD;
+    s.push({o:open,h:high,l:low,c:close});
+    o = close + rnd(-0.6,0.6) + drift*0.32;
+  }
+  const base = 1000 + rnd(0,40);
+  return s.map(k=>({o:base+k.o*4,h:base+k.h*4,l:base+k.l*4,c:base+k.c*4}));
+}
+function yScale(s,h){
+  const hi=Math.max(...s.map(k=>k.h)), lo=Math.min(...s.map(k=>k.l));
+  const pad=(hi-lo)*0.08, max=hi+pad, min=lo-pad;
+  return v => h - ((v-min)/(max-min))*h;
+}
+function grid(ctx,w,h){
+  ctx.fillStyle=T.bg; ctx.fillRect(0,0,w,h);
+  ctx.strokeStyle=T.grid; ctx.lineWidth=1;
+  for(let x=0;x<w;x+=Math.round(w/10)){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}
+  for(let y=0;y<h;y+=Math.round(h/6)){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}
+}
+function drawCandles(ctx,s,w,h){
+  const y=yScale(s,h), cw=w/s.length;
+  s.forEach((k,i)=>{
+    const x=i*cw+cw*0.5, bull=k.c>=k.o;
+    // wick
+    ctx.strokeStyle="rgba(230,236,246,.92)";
+    ctx.beginPath(); ctx.moveTo(x, y(k.h)); ctx.lineTo(x, y(k.l)); ctx.stroke();
+    // body
+    const bw=Math.max(1,cw*0.55);
+    ctx.fillStyle=bull?T.bull:T.bear; ctx.globalAlpha=.95;
+    const top=y(Math.max(k.o,k.c)), bot=y(Math.min(k.o,k.c));
+    ctx.fillRect(x-bw/2, top, bw, Math.max(1,bot-top));
+    ctx.globalAlpha=1;
+  });
+}
+function dashedV(ctx,x,y1,y2,color="#6aa2ff"){ctx.strokeStyle=color;ctx.setLineDash([6,6]);ctx.beginPath();ctx.moveTo(x,y1);ctx.lineTo(x,y2);ctx.stroke();ctx.setLineDash([])}
+function label(ctx,t,x,y,opts={}){ctx.font=(opts.size||12)+"px ui-sans-serif";ctx.fillStyle=opts.color||T.label;ctx.textAlign=opts.align||"left";ctx.fillText(t,x,y)}
+function box(ctx,x,y,w,h,fill,stroke){ctx.fillStyle=fill;ctx.fillRect(x,y,w,h);if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=1;ctx.strokeRect(x,y,w,h)}}
+function fvg(ctx,s,w,h){
+  const y=yScale(s,h), cw=w/s.length, i0=Math.floor(s.length*0.48), i1=i0+6;
+  const hi=Math.max(s[i0].h,s[i0+1].h), lo=Math.min(s[i1].l,s[i1-1].l);
+  const yTop=y(hi), yBot=y(lo), x=i0*cw, ww=(i1-i0)*cw;
+  box(ctx,x,yBot,ww,yTop-yBot,T.fvg,"#2e3c52");
+  ctx.strokeStyle=T.fvgLine; ctx.setLineDash([4,4]); ctx.beginPath(); ctx.moveTo(x,(yTop+yBot)/2); ctx.lineTo(x+ww,(yTop+yBot)/2); ctx.stroke(); ctx.setLineDash([]);
+  label(ctx,"FVG 50%", x+4,(yTop+yBot)/2-6,{size:11});
+  return {x,yTop,yBot,ww};
+}
+function dealing(ctx,w,h,s){
+  const y=yScale(s,h), hi=Math.max(...s.map(k=>k.h)), lo=Math.min(...s.map(k=>k.l)), mid=(hi+lo)/2;
+  const yHi=y(hi), yLo=y(lo), yMid=y(mid);
+  box(ctx,0,0,w,yMid,T.premium); box(ctx,0,yMid,w,h-yMid,T.discount);
+  ctx.strokeStyle="#3a4e6a"; ctx.setLineDash([5,5]); ctx.beginPath(); ctx.moveTo(0,yMid); ctx.lineTo(w,yMid); ctx.stroke(); ctx.setLineDash([]);
+  label(ctx,"Premium", w-70, 16,{align:"right"}); label(ctx,"Discount", w-70, h-8,{align:"right"});
+}
+function asia(ctx,w,h){const x=w*0.10, ww=w*0.32; box(ctx,x,0,ww,h,T.asia,"#1f2c3d"); label(ctx,"Asia Range", x+6,16)}
+function renderCanvas(cv, type="clean", annot=""){
+  const ctx=cv.getContext("2d"), w=cv.clientWidth, h=cv.clientHeight;
+  cv.width=w*2; cv.height=h*2; ctx.scale(2,2);
+  const s = series(150, {structure:.3, liquidity:.25, fvg:.35, dealing:.28, model1:.4, model2:.45, session:.3, clean:.32}[type] || .32);
+  grid(ctx,w,h);
+  if(type==="dealing") dealing(ctx,w,h,s);
+  if(type==="liquidity" || type==="session") asia(ctx,w,h);
+  drawCandles(ctx,s,w,h);
+  if(type==="structure"){
+    const cw=w/s.length;
+    dashedV(ctx, Math.floor(s.length*0.55)*cw, 0, h, "#89b4ff"); label(ctx,"BOS", Math.floor(s.length*0.55)*cw+6, 16);
+    dashedV(ctx, Math.floor(s.length*0.68)*cw, 0, h, "#ffa66b"); label(ctx,"CHoCH", Math.floor(s.length*0.68)*cw+6, 16,{color:"#efc89b"});
+  }
+  if(type==="liquidity"){
+    const y=yScale(s,h), pdh=Math.max(...s.slice(0,60).map(k=>k.h)), pdl=Math.min(...s.slice(0,60).map(k=>k.l));
+    ctx.strokeStyle="#3d5a7d"; ctx.setLineDash([4,6]); ctx.beginPath(); ctx.moveTo(0,y(pdh)); ctx.lineTo(w,y(pdh)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(0,y(pdl)); ctx.lineTo(w,y(pdl)); ctx.stroke(); ctx.setLineDash([]);
+    label(ctx,"PDH",6,y(pdh)-6); label(ctx,"PDL",6,y(pdl)-6);
+  }
+  if(type==="fvg"){ const b=fvg(ctx,s,w,h); dashedV(ctx, b.x+b.ww*0.15, 0, h, "#6aa2ff"); label(ctx,"micro BOS", b.x+b.ww*0.15+6, 16) }
+  if(type==="model1"){
+    if(annot==="after"){ fvg(ctx,s,w,h); dashedV(ctx, w*0.62, 0, h, "#78d0a0"); label(ctx,"TP Trail", w*0.62+6, 16) }
+    else { dashedV(ctx, w*0.42, 0, h, "#ffb37a"); label(ctx,"Sweep", w*0.42+6, 16,{color:"#ffcf96"}); dashedV(ctx, w*0.52, 0, h, "#8fb4ff"); label(ctx,"BOS", w*0.52+6, 16); fvg(ctx,s,w,h) }
+  }
+  if(type==="session"){
+    dashedV(ctx,w*0.50,0,h,"#7bdba5"); label(ctx,"London", w*0.50+6,16);
+    dashedV(ctx,w*0.75,0,h,"#e0af68"); label(ctx,"NY", w*0.75+6,16,{color:"#f0d6a4"});
+  }
+}
+
+/* ============================================================
+   2) Book Builder — build ~90 pages, no online TOC, numbered
+   ============================================================ */
+const root = document.getElementById('book-root');
+
+function page(sectionTag, chip, title, html){
+  const sec = document.createElement('section');
+  sec.className='page';
+  sec.innerHTML = `
+    <div class="head"><div class="sec">${sectionTag}</div><div class="chip">${chip}</div></div>
+    <h1>${title}</h1>
+    ${html}
+    <div class="footer"><span>${title}</span><span class="pageno"></span></div>
+  `;
+  root.appendChild(sec);
+}
+
+function fig(chartType, annot=true, caption=""){
+  return `
+    <div class="figure">
+      <canvas data-chart="${chartType}" ${annot?'data-annot="true"':''}></canvas>
+      ${caption?`<div class="figcap">${caption}</div>`:''}
+    </div>`;
+}
+
+/* ---------- A. Foundation (6 บท) ---------- */
+page('FOUNDATION • CH01','STRUCTURE','Market Structure — BOS / CHoCH', `
+  ${fig('structure', true, 'เส้นประ = BOS/CHoCH • ใช้ swing ที่ชัดเจนเท่านั้น')}
+  <div class="grid grid-2">
+    <div class="card"><h3>Tools</h3><ul class="tight"><li>Structure Lines</li><li>Session HL</li><li>Fib 0–100</li></ul>
+    <h3>How</h3><ol class="tight"><li>หา HH/HL หรือ LH/LL ที่ชัด</li><li>ยืนยันด้วยแท่งปิด (ไม่เดา)</li><li>เชื่อมต่อไปยังโซน value</li></ol></div>
+    <div class="card"><h3>Why</h3><p>การทำลายโครงสร้างต้องใช้พลังจริง — จึงมีน้ำหนักในการคาดการณ์ลากต่อ</p>
+    <h3>Mistakes</h3><ul class="tight"><li>รีบตี CHoCH กลาง range</li><li>เข้าเร็วก่อน BOS</li></ul></div>
+  </div>
+`);
+page('FOUNDATION • CH02','LIQUIDITY','Liquidity Map — PDH/PDL • EQH/EQL • Asia', `
+  ${fig('liquidity', true, 'ตี PDH/PDL • วง Asia • มอง sweep ก่อนหาโซน')}
+  <div class="card"><h3>Bridge</h3><p>อย่าเข้า “ระหว่างจะกวาด” ให้รอ “หลังกวาด” แล้วค่อยใช้ OB/FVG เป็นตัวพาเข้า</p></div>
+`);
+page('FOUNDATION • CH03','FVG','Fair Value Gap — 50% Entry', `
+  ${fig('fvg', true, 'Displacement จริง + 50% = จุดรับ/ยิงที่มีเหตุผล')}
+  <div class="grid grid-2">
+    <div class="card"><h3>How</h3><ol class="tight"><li>มองแรง displace</li><li>ลากกล่อง FVG + เส้น 50%</li><li>รอ micro BOS ในกล่อง</li></ol></div>
+    <div class="card"><h3>Quality</h3><ul class="tight"><li>ทับกับ OB สด</li><li>อยู่ฝั่ง value ของ Dealing Range</li></ul></div>
+  </div>
+`);
+page('FOUNDATION • CH04','DEALING RANGE','Premium / Discount (Dealing Range)', `
+  ${fig('dealing', true, 'Fib 0–100 • Premium/Discount ชัดเจน')}
+  <div class="card"><h3>หลักการ</h3><p>Buy ใน Discount • Sell ใน Premium • RR จะคมและมี edge</p></div>
+`);
+page('FOUNDATION • CH05','ORDER BLOCK','Order Block — Fresh vs Mitigated', `
+  ${fig('structure', true, 'OB คุณภาพ = ขนาดเหมาะสม • เกิดก่อน displacement • ยังไม่ถูกแตะ')}
+  <div class="grid grid-2">
+    <div class="card"><h3>Fresh</h3><p>พึ่งเกิด • ยังไม่ mitigate • อยู่ใน value</p></div>
+    <div class="card"><h3>Mitigated</h3><p>ถูกแตะแล้ว • ใช้เป็น TP/Flip ได้</p></div>
+  </div>
+`);
+page('FOUNDATION • CH06','TIMING','Session Behavior — Asia • London • NY', `
+  ${fig('session', true, 'Asia = สะสม • London = กวาด • NY = ต่อเนื่อง/กลับตัว')}
+  <div class="card"><h3>กฎเวลา</h3><ul class="tight"><li>หลีกเลี่ยงข่าว ±30 นาที</li><li>สัญญาณหมดอายุภายใน 3 แท่งถ้าไม่แตะโซน</li></ul></div>
+`);
+
+/* ---------- B. Execution Models (5 โมเดล) ---------- */
+function modelPage(idx, name, type){
+  page(`EXECUTION • CH1${idx}`,'MODEL',`${name}`, `
+    <div class="grid grid-2">
+      ${fig(type, true, 'Before / Setup')}
+      ${fig(type, "after", 'After / TP-Trail')}
+    </div>
+    <div class="card"><h3>ENTRY • SL • TP</h3>
+      <div class="kv">
+        <div><small>Entry</small></div><div>FVG 50% หรือ OB fresh ภายหลัง BOS</div>
+        <div><small>SL</small></div><div>นอก sweep wick หรือหลัง OB ที่ invalid โครงสร้าง</div>
+        <div><small>TP</small></div><div>TP1 = Resting Liquidity • TP2 = Opposing OB/Value</div>
+      </div>
+    </div>
+  `);
+}
+modelPage(0,'Model #1 — Sweep → BOS → FVG','model1');
+modelPage(1,'Model #2 — OB-in-FVG (Continuation)','fvg');
+modelPage(2,'Model #3 — Session Sweep + Inducement','session');
+modelPage(3,'Model #4 — Breaker Structure Reversal','structure');
+modelPage(4,'Model #5 — Mitigation Loop Setup','fvg');
+
+/* ---------- C. Multi-TF Execution Map (5 TF) ---------- */
+const TFs = [
+  {t:'4H', do:['ระบุ Bias จาก BOS/CHoCH','ทำ HTF Liquidity Map','ขีด Dealing Range ใหญ่'], chart:'structure'},
+  {t:'1H', do:['ยืนยันทิศด้วย displacement','วางกรอบ FVG/OB หลัก','จดเวลาข่าว'], chart:'fvg'},
+  {t:'15m',do:['หา sweep/inducement','เลือก Setup A–D','กำหนด Time-Decay'], chart:'liquidity'},
+  {t:'5m', do:['micro BOS ในโซน','กำหนด RR≥1:2','เตรียม management'], chart:'model1'},
+  {t:'1m', do:['พฤติกรรมแท่งละเอียด','เข้าแบบ precision','คุมอารมณ์'], chart:'clean'}
+];
+TFs.forEach((x,i)=>page(`SETUP • TF${x.t}`,'MTF',`Guided Execution — TF ${x.t}`, `
+  <div class="grid grid-2">
+    <div class="card"><h3>สิ่งที่ต้องทำ</h3><ul class="tight">${x.do.map(d=>`<li>${d}</li>`).join('')}</ul></div>
+    ${fig(x.chart,true,'ภาพตัวอย่างสิ่งที่ต้องเห็นใน TF นี้')}
+  </div>
+`));
+
+/* ---------- D. Trade Setup Bible ---------- */
+page('BIBLE • D15','TRADE SETUP','Trade Setup Bible — Identify → Execute → Reflect', `
+  <div class="grid grid-2">
+    <div class="card"><h3>Step</h3>
+      <ol class="tight">
+        <li>Identify (4H→1H): Bias • Liquidity • Value</li>
+        <li>Stalk (15m): sweep/inducement • FVG/OB สด</li>
+        <li>Trigger (5m): micro BOS ในโซน</li>
+        <li>Execute (1m): แท่งยืนยัน/การปฏิเสธ</li>
+        <li>Manage: TP1/TP2 • BE/Trail ตามโครงสร้าง</li>
+        <li>Reflect: Journal + SNF Score</li>
+      </ol>
+    </div>
+    <div class="card"><h3>SNF Scoring (0–10)</h3>
+      <ul class="tight"><li>Bias · Value · Timing · Confirm (อย่างละ 0–2)</li><li>ยิงเมื่อ ≥7</li></ul>
+      <h3>Common Mistakes</h3>
+      <ul class="tight"><li>เข้า “ระหว่างกำลังกวาด”</li><li>ไม่รอแท่งปิดยืนยัน BOS</li></ul>
+    </div>
+  </div>
+`);
+
+/* ---------- D16. Entry/SL/TP Integration ---------- */
+page('BIBLE • D16','ENTRY • STOP • TP','Entry • Stop • Take Profit — Integration Rules', `
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>ENTRY</h3><ul class="tight"><li>FVG 50% + micro BOS</li><li>OB fresh tap + trigger</li><li>Break-and-Retest ที่สอดคล้องโครงสร้าง</li></ul>
+      <h3>STOP</h3><ul class="tight"><li>นอก sweep wick / หลัง OB</li><li>เลี่ยง fixed pip</li></ul>
+    </div>
+    <div class="card">
+      <h3>TAKE PROFIT</h3><ul class="tight"><li>TP1 = Resting Liquidity ใกล้สุด</li><li>TP2 = Opposing OB/HTF value</li><li>Trail ด้วย structure หลังผ่าน TP1</li></ul>
+      <h3>Time-Decay</h3><p>ถ้า ≤3 แท่งยังไม่แตะโซน → สัญญาณหมดอายุ</p>
+    </div>
+  </div>
+`);
+
+/* ---------- E. Risk & Journal ---------- */
+page('RISK • E17','RISK','Risk · RR · Compounding · Recovery', `
+  <div class="grid grid-2">
+    <div class="card"><h3>Risk Template</h3>
+      <ul class="tight"><li>ทุนเล็ก: 0.25–0.5%/ไม้</li><li>RR เป้าหมาย 1:3–1:5</li><li>SL = invalidation โครงสร้าง</li></ul>
+      <h3>Compounding</h3><p>แผน 12 สัปดาห์แบบค่อยเป็นค่อยไป • เพิ่มขนาดไม้เฉพาะเมื่อ equity ทำ HH ใหม่</p>
+    </div>
+    <div class="card"><h3>Recovery</h3>
+      <ul class="tight"><li>Structure fail → Reset ที่ HTF value</li><li>หยุดเทรดเมื่ออารมณ์ร้อน (EHFS สูง)</li></ul>
+      <h3>Journal</h3><p>บันทึกเหตุผล เข้า/ออก • อารมณ์ • SNF</p>
+    </div>
+  </div>
+`);
+page('JOURNAL • E18','JOURNAL','SNF Scoring + Daily/Weekly Journal', `
+  <div class="card"><h3>Template</h3>
+  <ul class="tight"><li>วันที่ / สินทรัพย์ / TF</li><li>Bias/Value/Timing/Confirm</li><li>Entry/SL/TP/Outcome</li><li>EHFS (อุณหภูมิอารมณ์)</li><li>Reflection 3 บรรทัด</li></ul></div>
+`);
+
+/* ---------- F. Pattern Gallery (12 แบบ) ---------- */
+const patterns = [
+ 'Breaker','Mitigation','Inducement','Liquidity Void','OB-Chain','Range Trap',
+ 'Equal Highs / Equal Lows','Displacement Zone','Reaccumulation','Distribution Shift',
+ 'Stop Hunt (Fake Sweep)','Expansion / Compression'
+];
+patterns.forEach((p,ix)=>page(`PATTERN • F${19+ix}`,'PATTERN',`Pattern — ${p}`, `
+  <div class="grid grid-2">
+    ${fig(ix%2? 'structure':'fvg', true, 'Annotated')}
+    ${fig('clean', false, 'Clean Reference')}
+  </div>
+  <div class="card"><h3>กลไก</h3><p>อธิบายที่มาของแรง • บริบทที่ควรเกิด • จุดที่คนส่วนใหญ่พลาด • และวิธีคอนเฟิร์มก่อนเข้า</p></div>
+`));
+
+/* ---------- G. Deep Dive (3 คู่เงิน) ---------- */
+[
+  {sym:'XAUUSD', info:'ไวต่อข่าว • โฟกัส London→NY overlap', chart:'session'},
+  {sym:'EURUSD', info:'มีช่วง range เด่น • ชอบ fake-out ก่อนเลือกทิศ', chart:'structure'},
+  {sym:'USDJPY', info:'momentum-driven • เทรนด์ต่อเนื่อง', chart:'fvg'},
+].forEach((s,ix)=>page(`DEEP DIVE • G${20+ix}`,'SYMBOL',`${s.sym} — Behavior & Execution`, `
+  <div class="grid grid-2">
+    ${fig(s.chart, true, 'Annotated Behavior')}
+    ${fig('clean', false, 'Clean')}
+  </div>
+  <div class="card"><h3>แนวทาง</h3><p>${s.info}. ใช้ Liquidity Map รายวัน + Execution ตาม Setup A–D</p></div>
+`));
+
+/* ---------- H. Cognitive & Emotional Layer ---------- */
+page('MIND • H23','PSYCHOLOGY','Cognitive Triggers & Emotional Discipline', `
+  <div class="grid grid-2">
+    <div class="card"><h3>Triggers</h3><ul class="tight"><li>FOMO</li><li>Overconfidence</li><li>Revenge</li><li>Loss Aversion</li></ul></div>
+    <div class="card"><h3>Anchor</h3><ul class="tight"><li>3 ลมหายใจก่อนกดเข้า</li><li>ถาม: “ฉันเข้าใน value หรือยัง?”</li></ul></div>
+  </div>
+`);
+
+/* ---------- I. 30-Day Practice Program ---------- */
+page('PRACTICE • I24','PRACTICE','30-Day Practice Program', `
+  <div class="grid">
+    ${Array.from({length:30}).map((_,i)=>`
+      <div class="card"><b>Day ${i+1}</b>
+        <ul class="tight">
+          <li>เลือก 1 สินทรัพย์ (XAU/EUR/JPY)</li>
+          <li>HTF→LTF: Bias • Value • Timing • Trigger</li>
+          <li>วางแผน Entry/SL/TP และยิงเมื่อ SNF≥7</li>
+          <li>บันทึกผล + Reflection 1 บรรทัด</li>
+        </ul>
+      </div>`).join('')}
+  </div>
+`);
+
+/* ---------- J. Concept Map & Mistakes ---------- */
+page('REVIEW • J25','MAP','Concept Map — Structure → Liquidity → Timing → Execution → Management', `
+  ${fig('structure', true, 'MindMap (ย่อ) — โยงแนวคิดหลักทั้งหมด')}
+  <div class="card"><h3>Key</h3><p>เริ่มที่ Structure • ใช้ Liquidity เป็นแผนที่ • ให้เวลาเป็นตัวเปิดประตู • เข้าเฉพาะเมื่อ Execution ยืนยัน</p></div>
+`);
+page('REVIEW • J26','MISTAKES','Common Mistakes — Top 10 & Fix', `
+  <div class="card"><ol class="tight">
+    <li>เข้า “ระหว่างกวาด” — รอ “หลังกวาด” + BOS</li>
+    <li>วัด Fib หลายชุดซ้อน — เลือก leg ที่มี BOS</li>
+    <li>SL ไม่อิงโครงสร้าง — ปรับเป็น invalidation จริง</li>
+    <li>ไม่คุม Time-Decay — ตั้งหมดอายุสัญญาณ</li>
+    <li>ไม่ทำ Journal — ไม่มีการเรียนรู้ถาวร</li>
+    <li>FOMO จาก LTF — กลับไปเช็ค HTF bias</li>
+    <li>ละเลยข่าว — จัดตารางหลบ/เล่นแผนข่าวชัดเจน</li>
+    <li>RR ไม่พอ — หลีกเลี่ยง 1:1 เป็นนิสัย</li>
+    <li>ลากเส้นมั่ว — ใช้เส้นเท่าที่จำเป็น</li>
+    <li>ไม่เคารพเวลา — เข้าออกไม่ตรง Killzone</li>
+  </ol></div>
+`);
+
+/* ---------- Epilogue ---------- */
+page('EPILOGUE','CLOSING','Whispers of Smart Money', `
+  <p class="quote">“ตลาดไม่เคยตะโกน มันเพียงกระซิบ — เมื่อคุณฟังภาษาของโครงสร้าง สภาพคล่อง และเวลา ความมั่งคั่งจะเป็นฝ่ายไล่หาคุณเอง.”</p>
+  <div class="badge"><span>Master Edition v5.0+</span><span>© gogdood666</span></div>
+`);
+
+/* ============================================================
+   3) Activate all canvases + Page numbers
+   ============================================================ */
+function initCharts(){
+  document.querySelectorAll('canvas[data-chart]').forEach(cv=>{
+    const type = cv.dataset.chart || 'clean';
+    const annot= cv.dataset.annot || "";
+    renderCanvas(cv,type,annot);
+  });
+}
+function numberPages(){
+  const pages = document.querySelectorAll('.page .footer .pageno');
+  pages.forEach((el,i)=>{ el.textContent = `Page ${i+1}`; });
+}
+window.addEventListener('load', ()=>{ initCharts(); numberPages(); });
+window.addEventListener('resize', ()=>{ initCharts(); numberPages(); });
+</script>
+
+</body>
+</html>
